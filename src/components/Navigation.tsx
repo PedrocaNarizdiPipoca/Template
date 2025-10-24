@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from './ui/enhanced-button';
 import { gsap } from 'gsap';
+import { BRAND_CONFIG } from '../config/brandConfig';
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -36,21 +37,21 @@ export default function Navigation() {
         {/* Logo */}
         <div className="nav-item">
           <h1 className="text-2xl font-bold gradient-text cursor-pointer" onClick={() => scrollToSection('hero')}>
-            Flango
+            {BRAND_CONFIG.name}
           </h1>
         </div>
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-8">
           {[{
+          name: 'Home',
+          id: 'hero'
+        }, {
           name: 'About',
           id: 'about'
         }, {
           name: 'Portfolio',
           id: 'portfolio'
-        }, {
-          name: 'Testimonials',
-          id: 'testimonials'
         }, {
           name: 'Contact',
           id: 'contact'
@@ -61,7 +62,7 @@ export default function Navigation() {
 
         {/* CTA Button */}
         <div className="nav-item">
-          <Button variant="hero" size="lg" onClick={() => window.open('https://x.com/FlangoTheEditor', '_blank')}>
+          <Button variant="hero" size="lg" onClick={() => window.open(BRAND_CONFIG.socialMedia.twitter, '_blank')}>
             Let's Work Together
           </Button>
         </div>

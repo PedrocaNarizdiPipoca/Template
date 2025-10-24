@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_CONFIG } from '../../config/brandConfig';
 import { Button } from '../ui/enhanced-button';
 import { TwitterLogo, Envelope, MapPin } from 'phosphor-react';
 
@@ -95,7 +96,7 @@ export default function ContactSection() {
               variant="glow" 
               size="xl"
               className="text-lg px-12 py-6 mb-8"
-              onClick={() => window.open('https://x.com/FlangoTheEditor', '_blank')}
+              onClick={() => window.open(BRAND_CONFIG.socialMedia.twitter, '_blank')}
             >
               <TwitterLogo size={24} className="mr-3" weight="fill" />
               Let's Work Together
@@ -122,7 +123,7 @@ export default function ContactSection() {
                 </div>
                 <h4 className="text-lg font-medium text-foreground mb-2">Email</h4>
                 <p className="text-foreground-muted text-sm">
-                  flango@example.com
+                  {BRAND_CONFIG.email}
                 </p>
               </div>
 

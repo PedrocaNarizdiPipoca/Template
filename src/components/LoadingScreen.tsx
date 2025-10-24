@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import { BRAND_CONFIG } from '../config/brandConfig';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -42,10 +43,10 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       {/* Animated Logo/Text */}
       <div className="mb-12">
         <h1 className="text-6xl md:text-8xl font-light gradient-text text-glow translate-y-[-12%]">
-          Wellcome
+          Welcome
         </h1>
         <p className="text-center text-foreground-muted mt-4 text-lg tracking-wide">
-          Video Editor & Social Media Expert
+          Video Editor
         </p>
       </div>
 

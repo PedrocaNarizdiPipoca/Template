@@ -1,38 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_CONFIG } from '../../config/brandConfig';
 gsap.registerPlugin(ScrollTrigger);
-const portfolioVideos = [{
-  id: 1,
-  title: "Long Form Content Video",
-  src: "/assets/portfolio-video-2.mp4",
-  category: "Long Form"
-}, {
-  id: 2,
-  title: "Professional Video Edit",
-  src: "/assets/portfolio-video-3.mp4",
-  category: "Long Form"
-}, {
-  id: 3,
-  title: "Creative Content Video",
-  src: "/assets/portfolio-video-4.mp4",
-  category: "Long Form"
-}, {
-  id: 4,
-  title: "Short Form Video Content",
-  src: "/assets/portfolio-video-5.mp4",
-  category: "Short Form"
-}, {
-  id: 5,
-  title: "Professional Long Form Edit",
-  src: "/assets/portfolio-video-6.mp4",
-  category: "Long Form"
-}, {
-  id: 6,
-  title: "Short Form Social Media Video",
-  src: "/assets/portfolio-video-7.mp4",
-  category: "Short Form"
-}];
+const portfolioVideos = BRAND_CONFIG.videos.map((src, index) => ({
+  id: index + 1,
+  title: `Portfolio Video ${index + 1}`,
+  src,
+  category: index >= 3 ? "Short Form" : "Long Form"
+}));
 export default function PortfolioSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_CONFIG } from '../../config/brandConfig';
 import { TwitterLogo, InstagramLogo, YoutubeLogo } from 'phosphor-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,15 +49,14 @@ export default function FooterSection() {
   };
 
   const socialLinks = [
-    { icon: TwitterLogo, href: 'https://twitter.com/your-handle', label: 'X (Twitter)' },
-    { icon: InstagramLogo, href: 'https://instagram.com/your-handle', label: 'Instagram' },
-    { icon: YoutubeLogo, href: 'https://youtube.com/your-channel', label: 'YouTube' }
+    { icon: TwitterLogo, href: BRAND_CONFIG.socialMedia.twitter, label: 'X (Twitter)' },
+    { icon: InstagramLogo, href: BRAND_CONFIG.socialMedia.instagram, label: 'Instagram' },
+    { icon: YoutubeLogo, href: BRAND_CONFIG.socialMedia.youtube, label: 'YouTube' }
   ];
 
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -86,11 +86,11 @@ export default function FooterSection() {
               className="text-3xl font-light gradient-text mb-4 cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={scrollToTop}
             >
-              Flango
+              {BRAND_CONFIG.name}
             </h3>
             <p className="text-foreground-muted mb-6 max-w-md">
-              Transforming raw content into compelling visual stories that drive engagement and results. 
-              Professional video editing and social media strategy.
+              Transforming raw content into compelling visual stories that drive engagement and results.
+              Professional video editing services.
             </p>
             
             {/* Social Links */}
@@ -145,8 +145,8 @@ export default function FooterSection() {
             <ul className="space-y-2 text-foreground-muted">
               <li>Video Editing</li>
               <li>Content Creation</li>
-              <li>Social Media Strategy</li>
               <li>Thumbnail Design</li>
+              <li>Post Production</li>
             </ul>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function FooterSection() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground-muted text-sm mb-4 md:mb-0">
-            © 2024 Flango. All rights reserved.
+            © 2024 {BRAND_CONFIG.name}. All rights reserved.
           </p>
           
           <button

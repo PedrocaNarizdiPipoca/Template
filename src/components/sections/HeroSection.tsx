@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Button } from '../ui/enhanced-button';
+import { BRAND_CONFIG } from '../../config/brandConfig';
 import Orb from '../Orb';
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -106,7 +107,7 @@ export default function HeroSection() {
           </p>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3">
-            <Button variant="glow" size="default" onClick={() => window.open('https://x.com/FlangoTheEditor', '_blank')}>
+            <Button variant="glow" size="default" onClick={() => window.open(BRAND_CONFIG.socialMedia.twitter, '_blank')}>
               Work Together
             </Button>
             <Button variant="hero" size="default" onClick={() => scrollToSection('portfolio')}>

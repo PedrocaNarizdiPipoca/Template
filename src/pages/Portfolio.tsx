@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_CONFIG } from '../config/brandConfig';
 import LoadingScreen from '../components/LoadingScreen';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
 import PortfolioSection from '../components/sections/PortfolioSection';
-import TestimonialsSection from '../components/sections/TestimonialsSection';
 import ContactSection from '../components/sections/ContactSection';
 import FooterSection from '../components/sections/FooterSection';
 
@@ -52,10 +52,10 @@ export default function Portfolio() {
 
   useEffect(() => {
     // Update page title and meta
-    document.title = "Flango - Video Editor & Social Media Expert";
+    document.title = `${BRAND_CONFIG.name} - Video Editor`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional video editor and social media expert specializing in cinematic edits, social media content, and visual storytelling. Transform your raw footage into engaging visual experiences.');
+      metaDescription.setAttribute('content', `Professional video editor ${BRAND_CONFIG.name} specializing in cinematic edits and visual storytelling. Transform your raw footage into engaging visual experiences.`);
     }
   }, []);
 
@@ -75,7 +75,6 @@ export default function Portfolio() {
             <HeroSection />
             <AboutSection />
             <PortfolioSection />
-            <TestimonialsSection />
             <ContactSection />
           </main>
           

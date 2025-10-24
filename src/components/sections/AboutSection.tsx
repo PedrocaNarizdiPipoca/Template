@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_CONFIG } from '../../config/brandConfig';
 import { 
   PlayCircle, 
   Pen, 
@@ -111,9 +112,9 @@ export default function AboutSection() {
             <div className="relative group">
               <div className="glass-intense rounded-full p-2 hover-glow transition-all duration-500 group-hover:scale-105">
                 <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-2 border-glass-border">
-                  <img 
-                    src="/assets/profile-picture.jpg" 
-                    alt="Flango - Video Editor & Social Media Expert"
+                  <img
+                    src={BRAND_CONFIG.profilePicture}
+                    alt={`${BRAND_CONFIG.name} - Video Editor`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -129,14 +130,12 @@ export default function AboutSection() {
             <div>
               <h2 className="text-4xl md:text-5xl font-light mb-6">
                 <span className="gradient-text">High-End Video Editing</span>
-                <br />
-                <span className="text-foreground">& Social Media Strategy</span>
               </h2>
               
               <p className="text-lg text-foreground-muted leading-relaxed">
-                I create videos that don't just tell stories — they immerse the audience in them. 
-                From cinematic edits to stunning thumbnails, I use After Effects and Premiere Pro 
-                to transform content into unforgettable visual experiences for social media.
+                I create videos that don't just tell stories — they immerse the audience in them.
+                From cinematic edits to stunning thumbnails, I use After Effects and Premiere Pro
+                to transform content into unforgettable visual experiences.
               </p>
             </div>
 
