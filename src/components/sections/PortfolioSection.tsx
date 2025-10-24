@@ -85,17 +85,7 @@ export default function PortfolioSection() {
               <video className="w-full aspect-video rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" controls muted preload="metadata" playsInline poster={video.src}>
                 <source src={video.src} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
-              
-              {/* Video Info Below */}
-              <div className="mt-4 text-center">
-                <span className="inline-block px-3 py-1 text-xs text-primary bg-primary/10 rounded-full border border-primary/20 mb-2">
-                  {video.category}
-                </span>
-                <h3 className="text-lg font-medium text-foreground">
-                  {video.title}
-                </h3>
-              </div>
+              </video>      
             </div>)}
         </div>
 
