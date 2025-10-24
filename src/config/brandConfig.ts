@@ -1,7 +1,7 @@
 export const BRAND_CONFIG = {
   name: "Priyansu",
   logo: "/assets/Logo.png",
-  profilePicture: "/assets/profile-picture.jpg",
+  profilePicture: "/assets/Logo.png",
   email: "contact@priyansu.com",
 
   videos: [
