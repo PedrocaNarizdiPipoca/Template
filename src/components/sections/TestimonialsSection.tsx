@@ -6,28 +6,28 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [{
   id: 1,
   image: "/assets/testimonial-1.jpeg",
-  client: "Social Media Expert",
-  text: "Yo bro, the video you edited last week is now the most viewed on my channel! Huge thanks for the effort you put into it. Keep up the awesome work!"
+  client: "Content Creator",
+  text: "I didn't even have to ask for any changes"
 }, {
   id: 2,
   image: "/assets/testimonial-2.jpeg",
-  client: "Social Media Manager",
-  text: "Thanks bro looks good! The editing quality exceeded my expectations. Professional work delivered on time."
+  client: "Business Owner",
+  text: "I want to pay good and stay with you"
 }, {
   id: 3,
   image: "/assets/testimonial-3.jpeg",
   client: "YouTuber",
-  text: "The video you edited did good, didn't get an insane amount of views, but is getting traction compared to the other vids we've made. You cooked!"
+  text: "You really nailed it and put every feedback into it!"
 }, {
   id: 4,
   image: "/assets/testimonial-4.jpeg",
-  client: "Content Creator",
-  text: "Perfect! The quality is amazing and the editing style matches exactly what we discussed. Great work as always!"
+  client: "Video Enthusiast",
+  text: "I'm binge watching your videos"
 }, {
   id: 5,
   image: "/assets/testimonial-5.jpeg",
-  client: "Video Producer",
-  text: "Exceptional work! The attention to detail and creative transitions really elevated our content. Highly recommend!"
+  client: "Social Media Manager",
+  text: "Duc in case you forget, you're the man"
 }];
 export default function TestimonialsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
