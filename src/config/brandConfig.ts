@@ -1,5 +1,5 @@
 export const BRAND_CONFIG = {
-  name: "Salah Studio",
+  name: "Duc Studio",
   logo: "/assets/Logo.png",
   profilePicture: "/assets/Logo.png",
   email: "contact@priyansu.com",
