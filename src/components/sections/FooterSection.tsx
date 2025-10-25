@@ -57,6 +57,7 @@ export default function FooterSection() {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' }
   ];
 

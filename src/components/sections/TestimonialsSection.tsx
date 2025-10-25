@@ -15,14 +15,19 @@ const testimonials = [{
   text: "Thanks bro looks good! The editing quality exceeded my expectations. Professional work delivered on time."
 }, {
   id: 3,
-  image: "/assets/testimonial-4.jpeg",
+  image: "/assets/testimonial-3.jpeg",
   client: "YouTuber",
   text: "The video you edited did good, didn't get an insane amount of views, but is getting traction compared to the other vids we've made. You cooked!"
 }, {
   id: 4,
-  image: "/assets/testimonial-5.jpeg",
+  image: "/assets/testimonial-4.jpeg",
   client: "Content Creator",
   text: "Perfect! The quality is amazing and the editing style matches exactly what we discussed. Great work as always!"
+}, {
+  id: 5,
+  image: "/assets/testimonial-5.jpeg",
+  client: "Video Producer",
+  text: "Exceptional work! The attention to detail and creative transitions really elevated our content. Highly recommend!"
 }];
 export default function TestimonialsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);

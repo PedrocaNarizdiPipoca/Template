@@ -53,6 +53,9 @@ export default function Navigation() {
           name: 'Portfolio',
           id: 'portfolio'
         }, {
+          name: 'Testimonials',
+          id: 'testimonials'
+        }, {
           name: 'Contact',
           id: 'contact'
         }].map((item, index) => <button key={item.id} onClick={() => scrollToSection(item.id)} className="nav-item text-foreground-muted hover:text-foreground transition-colors duration-300 hover:text-glow mx-[15px] my-0 py-0 px-[23px]">
